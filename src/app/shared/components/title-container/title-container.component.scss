@@ -1,4 +1,6 @@
 .title-container {
+    container-type: inline-size;
+
     border: 1px solid #ccc;
     position: relative;
     width: 100%;
@@ -20,7 +22,7 @@
 }
 
 ::ng-deep .bg img {
-   position: absolute;  
+    position: absolute;  
     top: 0;              
     left: 0;           
     width: 100%;        
@@ -36,4 +38,14 @@
     justify-content: center;
     text-align: center;
     margin-top: 30%;
+}
+
+h1 {
+    font-size: 20cqw;
+
+    color: red;
+}
+
+h2 {
+    font-size: 6cqw;
 }

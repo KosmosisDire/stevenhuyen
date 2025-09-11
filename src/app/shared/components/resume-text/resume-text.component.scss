@@ -1,4 +1,7 @@
 .resume-text {
+    container-type: inline-size;
+
+    font-family: 'Calibri';
     text-align: left;
     align-items: start;
     word-wrap: normal;
@@ -10,9 +13,6 @@
 
     height: calc(100% - 2cqw);
     width: calc(100% - 4cqw);
-
-    font-family: 'Calibri';
-    container-type: inline-size;
 
     display: flex;
     flex-direction: column;
