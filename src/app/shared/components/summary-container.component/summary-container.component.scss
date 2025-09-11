@@ -1,0 +1,69 @@
+.summary-container {
+  display: grid;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.summary-container.portrait {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.summary-container.landscape {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.summary-container.reverse.portrait,
+.summary-container.reverse.landscape {
+  direction: rtl;
+}
+
+.section {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  max-height: 100%;
+  background: #fdf5ea;
+}
+
+::ng-deep .section > div {
+  width: 100%;
+  height: 100%;
+}
+
+::ng-deep .section img {
+  position: absolute;   
+  top: 0;           
+  left: 0;          
+  width: 100%;        
+  height: 100%;        
+  object-fit: cover;   
+  object-position: center center; 
+}
+
+.section.smaller {
+  aspect-ratio: 1 / 1;
+}
+
+.section:not(.smaller) {
+  aspect-ratio: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.about-title {
+    font-family: 'font1', sans-serif;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}

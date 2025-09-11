@@ -1,0 +1,37 @@
+<mat-icon 
+  class="menu-btn"
+  [ngStyle]="{ width: width, height: height }"
+  (click)="toggleSidebar($event)">
+  menu
+</mat-icon>
+
+<div class="sidebar" [ngClass]="{ open: isSidebarOpen }" (click)="$event.stopPropagation()">
+  <div class="sidebar-header">
+    <img class="header-item" src="assets/SN_Mono_Circle.png" width="28px" height="28px">
+    <span class="header-item">Steven Nguyen</span>
+    <button class="last-header-item close-btn" (click)="toggleSidebar($event)">×</button>
+  </div>
+
+  <ul class="menu-links">
+    <li
+      class="menu-item"
+      *ngFor="let item of menuItems"
+      (click)="navigateTo(item.route)"
+      [ngClass]="{ active: isActive(item.route) }">
+      <mat-icon class="menu-icon">{{ getIconForRoute(item.route) }}</mat-icon>
+      {{ item.label }}
+    </li>
+    <li class="menu-item" (click)="goToUrl('https://www.linkedin.com/in/steven-nguyen-340658244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app')">
+      Linkedin
+    </li>
+    <li class="menu-item" (click)="goToUrl('https://Github.com/StevenNguyen5858/')">
+      Github
+    </li>
+    <li class="menu-item" (click)="goToUrl('https://www.instagram.com/lunarliondance?igsh=MW9iMnU3eTJzMXc%3D&utm_source=qr')">
+      Lunar Lion Dance
+    </li>
+    <li class="menu-item" (click)="goToUrl('https://flightclub502.org/')">
+      Flight Club 502
+    </li>
+  </ul>
+</div>

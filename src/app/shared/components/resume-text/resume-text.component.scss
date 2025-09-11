@@ -1,0 +1,61 @@
+.resume-text {
+    text-align: left;
+    align-items: start;
+    word-wrap: normal;
+    
+    position: absolute;
+    margin-top: 1cqw;
+    margin-left: 2cqw;
+    color: black;
+
+    height: calc(100% - 2cqw);
+    width: calc(100% - 4cqw);
+
+    font-family: 'Calibri';
+    container-type: inline-size;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.title-line {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.role-title {
+    font-size: 3.6cqw;
+    font-weight: bold;
+}
+
+.organization {
+    font-size: 3.6cqw;
+    font-weight: normal;
+    color: #555;
+    margin-left: auto;
+}
+
+.period {
+    font-size: 3cqw;
+    margin-top: -0.5cqw;
+}
+
+.bullets {
+    font-size: 3.6cqw;
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
+    margin-left: 5cqw;
+}
+
+.skills-container {
+    font-size: 3cqw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: auto;
+}

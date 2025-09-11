@@ -1,0 +1,23 @@
+<div class="resume-text">
+    <div class="title-line">
+        <div class="role-title">
+            <ng-content select="[roleTitle]"></ng-content>
+        </div>
+     
+        <div class="organization">
+            <ng-content select="[organization]"></ng-content>
+        </div>
+    </div>
+
+    <div class="period">
+        <ng-content select="[period]"></ng-content>
+    </div>
+
+    <ul class="bullets">
+        <ng-content select="[bullets]"></ng-content>
+    </ul>
+
+    <div class="skills-container">
+        <ng-content select="[skill]"></ng-content>
+    </div>
+</div>

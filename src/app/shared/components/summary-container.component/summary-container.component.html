@@ -1,0 +1,11 @@
+<div class="summary-container body-item"
+     [ngClass]="[orientation, reverse ? 'reverse' : '']"
+     [style.gridTemplateRows]="orientation === 'portrait' ? aGridSize + 'fr ' + bGridSize + 'fr' : null"
+     [style.gridTemplateColumns]="orientation === 'landscape' ? aGridSize + 'fr ' + bGridSize + 'fr' : null">
+  <div class="section a" [ngClass]="getSmallerSectionClass('a')">
+    <ng-content select="[bodyA]"></ng-content>
+  </div>
+  <div class="section b" [ngClass]="getSmallerSectionClass('b')">
+    <ng-content select="[bodyB]"></ng-content>
+  </div>
+</div>

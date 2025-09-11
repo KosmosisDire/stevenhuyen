@@ -1,14 +1,170 @@
 <div class="body">
     <div class="backdrop-wrapper">
-        
-        <img src="assets/backdrop_pilot.jpg" alt="Backdrop clouds" class="backdrop">
-        
-        <header> <div>stuff</div></header>
-        <div class="title">
+        <img src="assets/backdrop_clouds.jpg" alt="Backdrop Pilot" class="backdrop-img">
+        <div class="title t1">
             <h1 class="name">Steven Nguyen</h1>
             <h2>Software Engineer</h2>
         </div>
     </div>
-</div>
 
-<app-template></app-template>
+    <div class="line"></div>
+    
+    <app-summary-container>
+        <div bodyA>
+            <img src="assets/backdrop_pilot.jpg" alt="Example"/>
+        </div>
+        <div bodyB>
+            <app-resume-text>
+                <span roleTitle>System Admininistrator</span>
+                <span organization>Flight Club 502</span>
+                <span period>November 2022 - February 2024</span>
+                <li bullets>Administered user accounts, including creation, modification, and access control.</li>
+                <li bullets>Enforced role-based permissions for scheduling flight operations and use of training facilities.</li>
+                <li bullets>Built automated CSV applications that filtered and sorted user data for management and reporting accuracy.</li>
+                <div skill class="skill">C++</div>
+                <div skill class="skill">C#</div>
+                <div skill class="skill">REST</div>
+                <div skill class="skill">DesktopApps</div>
+            </app-resume-text>
+        </div>
+    </app-summary-container>
+
+    <app-summary-container [aGridSize]="1" [bGridSize]="2">
+        <div bodyB>
+            <app-resume-text>
+                <span roleTitle>Software Engineer</span>
+                <span organization>Samtec</span>
+                <span period>November 2023 - Current</span>
+                <li bullets>Developed Samtec's primary Project Lifecycle Management (PLM) web application.</li>
+                <li bullets>Replaced several legacy applications with PLM, now relied upon by our company's Mechanical Engineers</li>
+                <li bullets>Implemented robust sorting, filtering, and search for tens of thousands of work orders, parts, and files.</li>
+                <li bullets>Contributed to Samtec's frontend framework used by software development teams company wide.</li>
+                <div skill class="skill">Angular</div>
+                <div skill class="skill">HTML</div>
+                <div skill class="skill">CSS</div>
+                <div skill class="skill">TS</div>
+                <div skill class="skill">C#</div>
+                <div skill class="skill">MongoDB</div>
+                <div skill class="skill">REST</div>
+            </app-resume-text>
+        </div>
+        <div bodyA>
+            <img src="assets/samtec.jpg" alt="Example"/>
+        </div>
+    </app-summary-container>
+
+    <app-summary-container [aGridSize]="1" [bGridSize]="2">
+        <div bodyB>
+            <app-resume-text>
+                <span roleTitle>Undergraduate TA <br>(Data Structures w/ C, C++)</span>
+                <span organization>UofL Speed School of Engineering</span>
+                <span period>August 2023 - May 2024</span>
+                <li bullets>Created exam questions for student tests on Data Structures, SDLCs, and C/C++ content.</li>
+                <li bullets>Created Data Structures and Software Development review products for exam review sessions.</li>
+                <li bullets>General teaching sessions and student 1x1 tutoring for over 70 students.</li>
+                <div skill class="skill">Data Structures</div>
+                <div skill class="skill">C</div>
+                <div skill class="skill">C++</div>
+                <div skill class="skill">Teaching</div>
+            </app-resume-text>
+        </div>
+        <div bodyA>
+            <img src="assets/j_b_speed.jpg" alt="Example"/>
+        </div>
+    </app-summary-container>
+
+    <app-summary-container [aGridSize]="1" [bGridSize]="2">
+        <div bodyB>
+            <app-resume-text>
+                <span roleTitle>IT Internship (SRE Cloud Transformation Team)</span>
+                <span organization>Humana</span>
+                <span period>May 2023 - June 2023</span>
+                <li bullets>Established automated monitoring, logging, and alerting across the lifecycle of four company applications for Site Reliability Engineering teams.</li>
+                <li bullets>Implemented monitoring and logging using Dynatrace and Splunk. Conducted environment reviews in Azure Cloud.</li>
+                <li bullets>Collaborated with Development, SRE, and contractor teams to deliver projects efficiently and reliably.</li>
+                <div skill class="skill">Dynatrace</div>
+                <div skill class="skill">Splunk</div>
+                <div skill class="skill">SRE</div>
+                <div skill class="skill">Cloud</div>
+                <div skill class="skill">Azure</div>
+                <div skill class="skill">SaaS</div>
+                <div skill class="skill">IaaS</div>
+            </app-resume-text>
+        </div>
+        <div bodyA>
+            <img src="assets/humana.jpg" alt="Example"/>
+        </div>
+    </app-summary-container>
+
+    <app-summary-container [aGridSize]="1" [bGridSize]="2">
+        <div bodyB>
+            <app-resume-text>
+                <span roleTitle>Undergraduate TA <br>(Python, Databases)</span>
+                <span organization>UofL Speed School of Engineering</span>
+                <span period>August 2022 - December 2022</span>
+                <li bullets>Graded assignments for 250+ students, covering Python topics including database management and scripting.</li>
+                <li bullets>Taught Python coding lab sessions, guiding students through practical exercises and problem-solving.</li>
+                <li bullets>Conducted general teaching sessions and one-on-one tutoring to support individual student learning.</li>
+                <div skill class="skill">Python</div>
+                <div skill class="skill">Scripting</div>
+                <div skill class="skill">Teaching</div>
+                <div skill class="skill">Mentoring</div>
+            </app-resume-text>
+        </div>
+        <div bodyA>
+            <img src="assets/ta.jpg" alt="Example"/>
+        </div>
+    </app-summary-container>
+
+    <app-summary-container [aGridSize]="1" [bGridSize]="2">
+        <div bodyB>
+            <app-resume-text>
+                <span roleTitle>1DA Frontline Supervisor</span>
+                <span organization>UPS Worldport North-Core</span>
+                <span period>February 2021 - August 2021</span>
+                <li bullets>Managed a team of 35 employees, overseeing training, work assignments, discipline, scheduling, and unload planning.</li>
+                <li bullets>High-priority next-day shipping (1DA) for vaccines, medical supplies, and critical shipments, ensuring respectful delivery.</li>
+                <li bullets>Directed 15+ drivers in "runout" operations, rapidly moving critical shipments across UPS Worldport's 6+ ramps and 125+ aircraft positions to meet tight departure schedules.</li>
+                <div skill class="skill">Leadership</div>
+                <div skill class="skill">Logistics</div>
+                <div skill class="skill">Communication</div>
+                <div skill class="skill">Training</div>
+            </app-resume-text>
+        </div>
+        <div bodyA>
+            <img src="assets/ups.jpg" alt="Example"/>
+        </div>
+    </app-summary-container>
+
+    <app-title-container>
+        <img bg src="assets/performer.jpg" alt="Example"/>
+        <div text class="title">
+            <h1 class="name">Lunar Lion Dance</h1>
+            <h2>Performer</h2>
+        </div>
+    </app-title-container>
+
+    <app-title-container>
+        <img bg src="assets/founder.jpg" alt="Example"/>
+        <div text class="title">
+            <h1 class="name">Lunar Lion Dance</h1>
+            <h2>Non-profit Founder</h2>
+        </div>
+    </app-title-container>
+
+    <app-title-container>
+        <img bg src="assets/louisville_3.jpg" alt="Example"/>
+        <div text class="title">
+            <h2 class="name" style="margin-top: 25%">Youth Performing Arts School</h2>
+            <h2>Guitar</h2>
+        </div>
+    </app-title-container>
+
+    <app-title-container>
+        <img bg src="assets/hiking.jpg" alt="Example"/>
+        <div text class="title">
+            <h1 class="name" style="margin-top: 30%">Louisvile Ky</h1>
+            <h2>Steven Nguyen</h2>
+        </div>
+    </app-title-container>
+</div>
