@@ -1,0 +1,9 @@
+@for (pdf of pdfFiles; track pdf.name) {
+  <div class="pdf-container">
+    <h3>{{ pdf.name }}</h3>
+    <embed [src]="pdf.path" type="application/pdf" width="100%" height="500px"/>
+    <div class="line"></div>
+  </div>
+} @empty {
+  <p>No PDFs available.</p>
+}

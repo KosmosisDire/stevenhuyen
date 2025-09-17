@@ -13,6 +13,10 @@
   </div>
 
   <ul class="menu-links">
+    <div class="row">
+      <h4 class="first-title menu-title"> Steven's Tools </h4>
+      <div class="line">  </div>
+    </div>
     <li
       class="menu-item"
       *ngFor="let item of menuItems"
@@ -21,6 +25,12 @@
       <mat-icon class="menu-icon">{{ getIconForRoute(item.route) }}</mat-icon>
       {{ item.label }}
     </li>
+
+    <div class="row">
+      <h4 class="menu-title"> Affiliate Links </h4>
+      <div class="line">  </div>
+    </div>
+   
     <li class="menu-item" (click)="goToUrl('https://www.linkedin.com/in/steven-nguyen-340658244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app')">
       Linkedin
     </li>
