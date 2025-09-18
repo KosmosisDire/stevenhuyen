@@ -1,0 +1,13 @@
+<div class="dropdown-pill" [class.pill-open]="isOpen" (click)="toggleOpen()">
+  <div class="pill-header">
+    <span class="pill-title">{{ title }}</span>
+    <mat-icon>arrow_drop_down</mat-icon>
+  </div>
+
+  @if (showContent) {
+    <div class="line"></div>
+    <div class="pill-content">
+      <ng-content select="[content]"></ng-content>
+    </div>
+  }
+</div>
