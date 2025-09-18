@@ -1,0 +1,43 @@
+.dropdown-pill {
+  display: flex;
+  flex-direction: column;
+  border-radius: 9999px;
+  background: rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: border-radius 0.2s ease; /* matches animationDuration in TS */
+}
+
+.pill-open {
+  border-radius: 24px;
+}
+
+.pill-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.pill-title {
+  flex: 1;
+  text-align: center;
+}
+
+.pill-content {
+  width: 100%;
+  margin: 1rem 0;
+  display: block; 
+
+  > * {
+    width: 100%;       
+    max-width: none;   
+    height: 1300px;   
+    display: block;
+    overflow-x: auto; 
+  }
+}

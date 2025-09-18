@@ -1,0 +1,11 @@
+<div class="body-item music-list">
+  @for (pdf of pdfFiles; track pdf.name) {
+    <app-dropdown-pill [title]="pdf.name">
+      <div content>
+          <embed [src]="pdf.path" type="application/pdf" width="100%" height="1300px"/>
+      </div>
+    </app-dropdown-pill>
+  } @empty {
+    <p>No PDFs available.</p>
+  }
+</div>
