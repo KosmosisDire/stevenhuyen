@@ -2,7 +2,13 @@
   @for (pdf of pdfFiles; track pdf.name) {
     <app-dropdown-pill [title]="pdf.name">
       <div content>
+        @if(!isMobile){
           <embed [src]="pdf.path" type="application/pdf" width="100%" height="1300px"/>
+        }@else {
+          <a [href]="pdf.path" download>
+            {{pdf.name}}
+          </a>
+        }
       </div>
     </app-dropdown-pill>
   } @empty {

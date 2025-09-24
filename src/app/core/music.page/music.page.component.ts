@@ -11,6 +11,7 @@ import { SharedModule } from '../../shared/shared-module';
 })
 export class MusicPageComponent implements AfterViewInit {
   pdfFiles: { name: string; path: SafeResourceUrl }[] = [];
+  isMobile: boolean = false;
 
   private rawFiles = [
     { name: 'Autumn Leaves', path: 'assets/pdfs/Autumn Leaves.pdf' },
@@ -25,7 +26,9 @@ export class MusicPageComponent implements AfterViewInit {
     { name: 'Fly me to the moon', path: 'assets/pdfs/Recuerdos de la Alhambra.pdf' }    
   ];
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer) {
+    this.isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+  }
 
   async ngAfterViewInit(): Promise<void> {
     for (const pdf of this.rawFiles) {
